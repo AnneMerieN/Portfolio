@@ -451,26 +451,37 @@ button:hover {
   100% { border-color: transparent; }
 }
 
-
 #changing-text {
   color: lightblue; /* Adjust color to match your theme */
   font-weight: bold;
   display: inline-block;
-  transition: transform 0.9s ease-out, opacity 0.9s ease-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Fade-in and Slide-up Effect */
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-out {
+/* Swipe Out Effect (Moves Text Up and Fades) */
+.swipe-out {
+  transform: translateY(-20px);
   opacity: 0;
-  transform: translateY(10px);
 }
 
+/* Swipe In Effect (Starts Lower and Moves Up) */
+.swipe-in {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: swipeUp 0.3s forwards;
+}
 
+/* Keyframe Animation for Swipe-Up */
+@keyframes swipeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
@@ -478,8 +489,6 @@ button:hover {
     width: 90%;
   }
 }
-
-
 
 @media (max-width: 680px) {
   .logo {
