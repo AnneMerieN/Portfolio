@@ -7,10 +7,14 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+
+#intro {
+  margin-bottom: 200px;
+}
+
 .main {
   flex: 1;
 }
-
 
 /* About Me Section */
 #about {
