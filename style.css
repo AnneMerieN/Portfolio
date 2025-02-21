@@ -434,6 +434,43 @@ button:hover {
   color: lightblue;
 }
 
+#changing-text {
+  color: lightblue; /* Adjust color to match your theme */
+  font-weight: bold;
+  border-right: 3px solid white; /* Cursor effect */
+  padding-right: 5px;
+  animation: blink 0.8s infinite alternate;
+}
+#Anne {
+  color: lightpink;
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+  0% { border-color: white; }
+  100% { border-color: transparent; }
+}
+
+
+#changing-text {
+  color: lightblue; /* Adjust color to match your theme */
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.9s ease-out, opacity 0.9s ease-out;
+}
+
+/* Fade-in and Slide-up Effect */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {

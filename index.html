@@ -23,7 +23,7 @@
   </nav>
 
   <div class="main">
-    <h1 id="intro"></h1>
+    <h1 id="intro"><span id="Anne">Anne</span> is a <br><span id="changing-text"></span></h1>
 
     <section id="about">
       <h2>Hello!👋Welcome to my page.</h2>
@@ -70,7 +70,7 @@
         </div>
       </div>
       <div class="skill">
-        <span class="skill-title">🛠  Developer Tools</span>
+        <span class="skill-title">🔗 Developer Tools</span>
         <div class="sub-skills">
           <span class="sub-skill">Git</span>
           <span class="sub-skill">Github</span>
@@ -135,27 +135,37 @@
       </a>
     </div>
   </footer>
-  
+
   <script>
-    const textArray = [
-      "Hi, I'm ", 
-      "<span class='pink-text'>Anne</span>", 
-      ". I make simple ", 
-      "<span class='blue-text'>video games</span>",
-      "."
-    ];
+    const roles = ["Video Game Developer", "UI/UX Designer", "Front-End Developer"];
+    let roleIndex = 0;
     
-    let index = 0;
-    function typeEffect() {
-      if (index < textArray.length) {
-        document.getElementById("intro").innerHTML += textArray[index];
-        index++;
-        setTimeout(typeEffect, 600); // Increased delay to 300ms for a slower effect
-      }
+    function changeRole() {
+      const textElement = document.getElementById("changing-text");
+  
+      // Apply exit animation
+      textElement.classList.remove("fade-in");
+      textElement.classList.add("fade-out");
+  
+      setTimeout(() => {
+        // Change text after fading out
+        textElement.innerText = roles[roleIndex];
+  
+        // Apply entrance animation
+        textElement.classList.remove("fade-out");
+        textElement.classList.add("fade-in");
+  
+        // Move to the next role
+        roleIndex = (roleIndex + 1) % roles.length;
+      }, 300); // Wait for fade-out animation to complete
     }
-    
-    typeEffect();
+  
+    setInterval(changeRole, 2000); // Change text every 2 seconds
+    changeRole(); // Run once on page load
   </script>
+  
+  
+  
   
   
 </body>
