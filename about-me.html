@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>About Me</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,15 +13,60 @@
 </head>
 
 <body>
+
   <nav>
     <ul>
-      <li><a href="about-me.html">About Me</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-me.html" class="active">About Me</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+
+  <div class="container">
   
+    <!-- Hobbies Section -->
+    <section class="section-box">
+      <h2>🎨 Hobbies</h2>
+      <p>When I'm not coding or designing, I enjoy:</p>
+      <ul>
+        <li>🎮 Playing video games</li>
+        <li>☕ Exploring new cafes</li>
+        <li>🎵 Listening to Jpop</li>
+        <li>📚 Reading manga</li>
+        <li>🏸 Playing badminton</li>
+        <li>🏓 Playing ping-pong</li>
+        <li>🃏 Opening Pokemon Cards</li>
+      </ul>
+    </section>
+  
+    <!-- Favorite Game Section -->
+    <section class="section-box">
+      <h2>🎮 Favorite Game</h2>
+      <img src="./assets/images/pengu-dabbing.gif" alt="Favorite Game">
+      <p>My favorite game obviously is <span class="highlight">TFT</span>!  
+        I play a game of TFT almost everyday. I'm also Platinum III in the game. <br>Fun Fact: I own 5 poros.</p>
+    </section>
+  
+    <!-- Book Recommendation Section -->
+    <section class="section-box">
+      <h2>📖 Book Recommendation</h2>
+      <img src="./assets/images/gamers-brain.jpg" alt="Book Cover">
+      <p>I recommend <span class="highlight">The Gamer's Brain</span>
+        by Celia Hodent. Celia's book is an amazing introduction to how we, humans, function and how to apply this knowledge to video games.</p>
+    </section>
+  
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Anne. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 
 </html>

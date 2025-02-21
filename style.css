@@ -487,6 +487,81 @@ button:hover {
   }
 }
 
+/*---------------------------------------------------------------------------------------------------------*/
+/* STYLES SPECIFIC TO ABOUT ME PAGE */
+/* Center Container */
+.container {
+  max-width: 1200px; /* Restricts width */
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual Sections */
+.section-box {
+  flex: 1;
+  min-width: 350px;
+  max-width: 500px;
+  padding: 30px;
+  background-color: #141414;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* Section Headings */
+.section-box h2 {
+  font-size: 1.8rem;
+  color: lightpink;
+}
+
+/* Paragraphs */
+.section-box p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Rounded List Items (Hobbies) */
+.section-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section-box ul li {
+  font-size: 1.1rem;
+  color: white;
+  background-color: #222;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: inline-block;
+  margin: 5px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.section-box ul li:hover {
+  transform: translateY(-3px);
+}
+
+/* Images for Favorite Game & Book */
+.section-box img {
+  width: 160px;
+  height: auto;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
 /* Responsive Adjustments */
 @media (max-width: 600px) {
   form {
