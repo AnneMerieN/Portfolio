@@ -1,0 +1,470 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #222222;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+.main {
+  flex: 1;
+}
+
+
+/* About Me Section */
+#about {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #141414;
+  border-radius: 15px;
+  width: 80%;
+  margin: 40px auto;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Cute Header Styling */
+#about h2 {
+  font-size: 2.5rem;
+  color: lightpink;
+  font-weight: bold;
+  margin-bottom: 15px;
+
+}
+
+/* Text Styling */
+#about p {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Me Section */
+#about {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #222222;
+  width: 80%;
+  margin: 40px auto;
+  position: relative;
+}
+
+/* Cute Header Styling */
+#about h2 {
+  font-size: 2.5rem;
+  color: lightpink;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Text Styling */
+#about p {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Remove the default sparkle icon */
+#about::before {
+  content: "";
+  position: absolute;
+  top: -50px;  /* Adjust position if needed */
+  left: -50px; /* Adjust position if needed */
+  width: 140px; /* Increase width */
+  height: 140px; /* Increase height */
+  background-image: url("./assets/images/kirby-flying.gif"); /* Use your GIF */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/* Cute Animation */
+@keyframes sparkle {
+  0% { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+.wave {
+  font-size: 1.5em; /* Makes the emoji bigger */
+  display: inline-block;
+  animation: wave-animation 1s infinite alternate;
+}
+
+/* Waving Effect */
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(20deg); }
+}
+
+
+h1 {
+  font-size: 5rem;
+}
+
+footer {
+  text-align: right;
+  color: midnightblue;
+}
+
+.tile-image {
+  height: 200px;
+  float: left;
+  margin-right: 50px;
+}
+
+.card {
+  width: 45%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.Anne {
+  color: lightpink;
+}
+.video-games {
+  color: lightblue;
+}
+
+nav {
+  background-color: #141414;
+  padding: 10px 20px;
+  width: fit-content; /* Shrinks navbar width to fit content */
+  margin-left: auto; /* Pushes navbar to the right */
+  border-radius: 25px; /* Optional: Add rounded corners for aesthetics */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+/* Skills Section */
+#skills {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Main Skill Button Style (Now Matches Background but Has 3D Effect) */
+.skill {
+  background-color: #141414;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  min-width: 250px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Hover Effect (Fine-Tuned for Better Depth) */
+.skill:hover {
+  transform: translateY(-4px); /* Slightly lifted effect */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6); /* Soft but defined shadow */
+}
+
+
+/* Sub-Skills (Rounded Pill Style) */
+.sub-skills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sub-skill {
+  background-color: #222222;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section */
+#projects {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Projects Grid Layout */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Individual Project Cards */
+.project-card {
+  background-color: #141414;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Project Image */
+.project-card img {
+  width: 100%; /* Ensures image takes full width */
+  height: 180px; /* Sets a fixed height for consistency */
+  object-fit: contain; /* Ensures the whole image fits without cropping */
+  border-radius: 10px; /* Optional: Rounds the corners */
+  background-color: #222222; /* Adds a background color to fill empty space */
+}
+
+
+/* Project Title */
+.project-card h3 {
+  font-size: 1.5rem;
+  color: lightpink;
+  margin-top: 10px;
+}
+
+/* Project Description */
+.project-card p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-top: 5px;
+}
+
+/* Hover Effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  animation: fadeIn 2s ease-in;
+}
+
+/* Footer Section */
+footer {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  border-top: 2px solid #222;
+}
+
+/* Footer Text */
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Social Media Links */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-links img {
+  width: 30px; /* Adjust icon size */
+  height: 30px;
+  filter: brightness(0) invert(1); /* Makes icons white to match theme */
+  transition: opacity 0.2s ease-in-out;
+}
+
+.social-links a {
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+/* CONTACT FORM  */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #141414;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Fields */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background-color: #222222;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Placeholder Text */
+input::placeholder, textarea::placeholder {
+  color: #777;
+}
+
+/* Submit Button */
+button {
+  background-color: #222222;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Styling JavaScript */
+.pink-text {
+  color: lightpink;
+}
+
+.blue-text {
+  color: lightblue;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+  }
+}
+
+
+
+@media (max-width: 680px) {
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  .card img {
+    margin-bottom: 10px;
+    width: 100%;
+    display: inline;
+    object-fit: cover;
+  }
+}

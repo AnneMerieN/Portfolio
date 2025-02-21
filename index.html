@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="about-me">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="main">
+    <h1 id="intro"></h1>
+
+    <section id="about">
+      <h2>Hello!👋Welcome to my page.</h2>
+      <p>I'm a passionate game developer who enjoys creating fun, interactive experiences. 
+         Whether it's designing game mechanics or refining UI/UX, I love blending creativity with technology.</p>
+    </section>
+  </div>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <span class="skill-title">🎮 Game Development</span>
+        <div class="sub-skills">
+          <span class="sub-skill">Unity</span>
+          <span class="sub-skill">C#</span>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-title">💻 Web Development</span>
+        <div class="sub-skills">
+          <span class="sub-skill">HTML</span>
+          <span class="sub-skill">CSS</span>
+          <span class="sub-skill">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-title">🎨 UI/UX Design</span>
+        <div class="sub-skills">
+          <span class="sub-skill">Figma</span>
+          <span class="sub-skill">Adobe XD</span>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-title">⚛️ Frontend Development</span>
+        <div class="sub-skills">
+          <span class="sub-skill">React.js</span>
+          <span class="sub-skill">Tailwind CSS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="./assets/images/pixel-kirby.png" alt="Project 1">
+        <h3>Flappy Kirby</h3>
+        <p>A game inspired by Flappy Bird, featuring Kirby as the main character.</p>
+      </div>
+      <div class="project-card">
+        <img src="./assets/images/bidoof-png.png" alt="Project 2">
+        <h3>Whac-a-Bidoof</h3>
+        <p>A fun whac-a-mole game with Bidoof, built using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <img src="./assets/images/surging-sparks-pack.PNG" alt="Project 3">
+        <h3>Pokemon TCG Pack Opener</h3>
+        <p>Simple Pokemon Pack Opener using HTML, CSS, and JavaScript</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for collaboration or inquiries!</p>
+    
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+  
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  
+  
+  <footer>
+    <p>© 2024 Anne. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/AnneMerieN" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/anne-merie-nguyen/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/_anne_merie/?hl=en" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </footer>
+  
+  <script>
+    const textArray = [
+      "Hi, I'm ", 
+      "<span class='pink-text'>Anne</span>", 
+      ". I make simple ", 
+      "<span class='blue-text'>video games</span>",
+      "."
+    ];
+    
+    let index = 0;
+    function typeEffect() {
+      if (index < textArray.length) {
+        document.getElementById("intro").innerHTML += textArray[index];
+        index++;
+        setTimeout(typeEffect, 600); // Increased delay to 300ms for a slower effect
+      }
+    }
+    
+    typeEffect();
+  </script>
+  
+  
+</body>
+
+</html>
