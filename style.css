@@ -304,11 +304,53 @@ input, textarea {
   margin-top: 5px;
 }
 
+/* Tools Used Section in Project Cards */
+.tools-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Individual Tool (Styled Like Skills) */
+.tool {
+  background-color: #222222;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Hover Effect (Slight Lift) */
+.tool:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+
 /* Hover Effect */
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
+
+/* Role & Contributions Styling */
+.role, .contributions {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Highlight the labels */
+.role strong, .contributions strong {
+  color: lightpink;
+}
+
 
 @keyframes fadeIn {
   from {
