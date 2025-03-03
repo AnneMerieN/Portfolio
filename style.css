@@ -254,11 +254,13 @@ input, textarea {
 /* Projects Grid Layout */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px; /* Increases spacing between cards */
   width: 80%;
   margin: 0 auto;
+  justify-content: center;
 }
+
 
 /* Individual Project Cards */
 .project-card {
@@ -281,12 +283,12 @@ input, textarea {
 
 /* Project Videos */
 .video {
-  width: 300px; /* Set a fixed width */
-  height: 200px; /* Set a fixed height */
-  object-fit: cover; /* Ensures the video fills the area while maintaining aspect ratio */
+  width: 100%; /* Ensures video fills the width of its container */
+  max-width: 300px; /* Prevents the video from getting too large */
+  aspect-ratio: 16 / 9; /* Ensures consistent aspect ratio for all videos */
   border-radius: 10px; /* Keeps the rounded corners */
-  overflow: hidden;
 }
+
 
 /* Project Title */
 .project-card h3 {
@@ -395,11 +397,18 @@ form {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  background-color: #141414;
   padding: 20px;
+  background-color: #141414;
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
+
+input, textarea {
+  width: 100%; /* Ensures form fields take full width */
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
 
 /* Input Fields */
 input, textarea {
